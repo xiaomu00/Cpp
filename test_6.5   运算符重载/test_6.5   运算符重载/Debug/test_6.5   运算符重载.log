@@ -1,0 +1,6 @@
+﻿  Date Time.cpp
+e:\学习\比特\项目\c++\test_6.5   运算符重载\test_6.5   运算符重载\date time.cpp(48): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\software\vs 2013\vc\include\time.inl(112) : 参见“localtime”的声明
+e:\学习\比特\项目\c++\test_6.5   运算符重载\test_6.5   运算符重载\date time.cpp(71): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+          d:\software\vs 2013\vc\include\conio.h(131) : 参见“getch”的声明
+  test_6.5   运算符重载.vcxproj -> E:\学习\比特\项目\C++\test_6.5   运算符重载\Debug\test_6.5   运算符重载.exe
