@@ -383,3 +383,51 @@ using namespace std;
 //		cout << "d1==d2" << endl;
 //	return 0;
 //}
+class Complex
+{
+public:
+	Complex(int a = 0, int b = 0) :real(a), imag(b)
+	{}
+
+public:
+	friend  Complex operator +(int &c1, Complex c2);
+	friend  ostream& operator <<(ostream& out,Complex c);
+	friend  istream& operator >>(istream& in, Complex c);
+public:
+	Complex operator + (Complex &c2);
+private:
+	int real;
+	int imag;
+};
+ostream& operator <<(ostream& out, Complex c)
+{
+	cout << c.real << endl;
+	cout << c.imag << endl;
+	return out;
+}
+istream& operator >>(istream& in, Complex c)
+{
+	cin >> c.real >> c.real;
+}
+
+Complex Complex:: operator + (Complex &c2)//加入在类外实现，加上Comlex::限定作用域
+{
+	Complex  c;
+	c.real = real + c2.real;
+	c.imag = imag + c2.imag;
+	return c;
+}
+
+Complex operator + (int &c1, Complex c2)
+{
+	return Complex(c1 + c2.real, c2.imag);
+}
+
+
+int main()
+{
+	Complex c1(4,7);
+	Complex c2(11,32);
+	cout << c1 + c2 << endl;
+	return 0;
+}
